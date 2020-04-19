@@ -11,6 +11,7 @@ cd ~/wine
 
 # Open XQuartz app in Applications/Utils/XQuartz
 # Настройки - Безопасность - Разрешить подключение из клиентских сетей
+# [eng] Preferences - Security - Enable connections from client networks
 # Relogin
 
 # Install brew if not exist
@@ -34,6 +35,11 @@ Checks before start
 # Check sound
 ./sound_test.sh
 # Should make a noise // Press Ctrl+C to stop
+
+# Check x11
+./x11_test.sh
+# Should open windows notepad // Close by x in ui 
+
 ```
 
 Start wine
