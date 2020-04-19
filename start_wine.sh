@@ -33,6 +33,7 @@ docker run -it \
 --volume="$HOME/.config/pulse:/root/.config/pulse" \
 --hostname="winecellar" \
 --name="wine" \
+-w /root/ \
 --privileged \
 wine bash
 
