@@ -15,6 +15,9 @@ cd ~/wine
 
 # Install brew if not exist
 brew install pulseaudio
+# Enable needed module
+sed -i -- '/#load-module\ module-native-protocol-tcp/s/^#//g' /usr/local/opt/pulseaudio/etc/pulse/default.pa
+
 brew services start pulseaudio
 
 # Build image
@@ -31,11 +34,6 @@ Checks before start
 # Check sound
 ./sound_test.sh
 # Should make a noise // Press Ctrl+C to stop
-
-# Check x11
-./x11_test.sh
-# Should open windows notepad // Close by x in ui 
-
 ```
 
 Start wine
